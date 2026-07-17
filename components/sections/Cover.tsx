@@ -6,11 +6,11 @@ export default function Cover({ proposal }: { proposal: Proposal }) {
   return (
     <div className="relative">
       <Reveal>
-        <h1 className="font-display leading-[1.1] tracking-tight">
-          <span className="block whitespace-nowrap text-[clamp(1.35rem,6.2vw,4.5rem)] font-bold">
+        <h1 className="@container font-display leading-[1.02] tracking-tight text-center">
+          <span className="block whitespace-nowrap text-[10.2cqw] font-bold">
             {proposal.client.name}
           </span>
-          <span className="mt-2 block whitespace-nowrap text-[clamp(1.15rem,5.2vw,3.5rem)] font-light accent-text">
+          <span className="mt-1 block whitespace-nowrap text-[7.3cqw] font-light accent-text">
             {proposal.client.proposalTitle}
           </span>
         </h1>

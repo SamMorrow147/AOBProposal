@@ -44,11 +44,11 @@ export const adsOnBoards: Proposal = {
   intro: {
     headline: "Website Rebuild",
     opening:
-      "This proposal brings together GA Consulting and Clubhaus Agency \u2014 a partnership built to give AOB both strategic clarity and creative execution under one roof. GAC leads the business and consulting side; Clubhaus builds the digital experience. Together, we specialize in crafting focused marketing and web solutions that match your brand\u2019s voice and objectives. Our commitment to excellence and innovation is matched only by our dedication to your success.",
+      "This project is a team effort between GA Consulting and Clubhaus Agency. GAC handles the business and strategy side; Clubhaus designs and builds the website. You get both in one place \u2014 people who understand your business and people who can build a site that actually works for it.",
     approach:
-      "As a combined team, we believe in a seamless blend of analytics and creativity. GA Consulting brings the operational and growth perspective; Clubhaus Agency brings design, development, and digital craft. Together we navigate the digital landscape with a keen eye for data-driven results and an artistic touch that engages and captivates \u2014 architects of digital experiences that forge lasting relationships between brands and their audiences.",
+      "We keep it simple: figure out what your customers need, then build a site that gets them there. GAC brings the business thinking; Clubhaus brings the design and development. The result is a site that looks great, loads fast, and makes it easy to book a cleaning or buy a product \u2014 no guesswork for the people using it.",
     whatToExpect:
-      "This proposal outlines our shared approach to your project: the services we offer, the strategies we recommend, and the outcomes we anticipate. Our goal is to deliver not just a service, but an experience that reflects the caliber of both GAC and Clubhaus \u2014 and the standard your brand deserves.",
+      "The pages ahead lay out exactly what we\u2019ll do, how long it\u2019ll take, and what it costs. No surprises and no filler \u2014 just a clear plan for rebuilding the AOB site and the ongoing support to keep it running after launch.",
   },
   brief: {
     overview:
