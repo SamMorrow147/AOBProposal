@@ -54,18 +54,18 @@ export const adsOnBoards: Proposal = {
     overview:
       "AOB works with hockey rink managers and hockey associations across the country \u2014 cleaning dasher boards and glass with a patented cleaning system, and selling dasher board ads, step ads, blue and red line ads, glass ads, and hockey coaching and rink cleaning products. The current site runs on WordPress + WooCommerce with roughly 22 pages: 7 site pages and a flat shop of 15 products.",
     problem:
-      "The current site isn\u2019t working for AOB. The design is clunky and dated, with no real visual hierarchy \u2014 the cleaning service, the shop, and basic company info all compete for attention on the same crowded pages, so visitors aren\u2019t sure where to look or what to do first. Our full crawl of the site surfaced the technical issues behind that experience, from a broken sitemap to a shop with no product categories \u2014 detailed in the Site Audit & Findings below.",
+      "The current site isn\u2019t working for AOB. The design is clunky and dated, with no real visual hierarchy \u2014 the cleaning service, the shop, and basic company info all compete for attention on the same crowded pages, so visitors aren\u2019t sure where to look or what to do first. Our full crawl of the site surfaced the technical issues behind that experience, from a broken sitemap to a shop that\u2019s hard to browse \u2014 detailed in the Flags below.",
     solution:
-      "We\u2019ll redesign and rebuild the AOB site with a modern, hockey-forward look and a clear visual hierarchy so the cleaning service and the shop each get the attention they deserve. Fifteen products get organized into clear categories \u2014 Dasher Board Ads, Line/Glass/Step Ads, Cleaning & Rink Equipment, and Coaching & Team Products \u2014 with complete pricing on every page. The existing scheduling page gets a cleaner booking experience so rink managers can book a board or glass cleaning without friction. Under the hood we fix the foundations: a working XML sitemap, consolidated URLs, a real privacy policy, and on-page SEO so the site actually gets found \u2014 plus a clear path from every page to an order or a booking.",
+      "We\u2019ll redesign and rebuild the AOB site with a modern, hockey-forward look and a clear visual hierarchy so the cleaning service and the shop each get the attention they deserve. The product catalog gets cleaned up and easier to browse, with clearer organization shaped during discovery. The existing scheduling page gets a cleaner booking experience so rink managers can book a board or glass cleaning without friction. Under the hood we fix the foundations: a working XML sitemap, consolidated URLs, a real privacy policy, and on-page SEO so the site actually gets found \u2014 plus a clear path from every page to an order or a booking.",
     strategyPoints: [],
   },
   brand: {
-    heading: "Site Audit & Findings",
+    heading: "Site Audit & Flags",
     intro:
-      "We crawled and captured every page of adsonboardsusa.com and built a visual sitemap of the full site \u2014 22 pages, 3 levels deep. These findings shape the rebuild scope.",
+      "We crawled and captured every page of adsonboardsusa.com and built a visual sitemap of the full site \u2014 22 pages, 3 levels deep. These flags shape the rebuild scope.",
     groups: [
       {
-        title: "SEO & Indexing",
+        title: "Flags",
         items: [
           {
             title: "Broken XML Sitemap",
@@ -82,40 +82,20 @@ export const adsOnBoards: Proposal = {
             description:
               "The nav links to /about-us-2/, but a duplicate About page also resolves at /about-us/. We\u2019ll consolidate with a redirect so authority isn\u2019t split between two URLs.",
           },
-        ],
-      },
-      {
-        title: "Shop Structure",
-        items: [
           {
-            title: "Flat Product Catalog",
+            title: "Hard-to-Browse Shop",
             description:
-              "All 15 products live on a single shop page with no category pages. We\u2019ll introduce four clear categories so buyers can find dasher board ads or cleaning kits in one click.",
+              "All 15 products currently live on a single shop page. As part of the rebuild, we\u2019ll tighten how products are presented so buyers can find what they need more easily \u2014 exact organization to be confirmed during discovery.",
           },
-          {
-            title: "Missing Price",
-            description:
-              "The Glass Ad product page displays no price \u2014 a lost sale waiting to happen. Every product in the new catalog gets complete, accurate pricing.",
-          },
-        ],
-      },
-      {
-        title: "Conversion Gaps",
-        items: [
           {
             title: "Unclear Calls to Action",
             description:
-              "The cleaning service and the product shop compete for attention on one long homepage. The rebuild gives each a clear pathway with focused calls to action.",
+              "The cleaning service and the product shop compete for attention on one long homepage. The rebuild gives each a clearer pathway with focused calls to action.",
           },
-        ],
-      },
-      {
-        title: "Mobile Experience",
-        items: [
           {
             title: "Cramped on Phones",
             description:
-              "Buttons, menus, and product cards feel tight and hard to tap on a phone \u2014 a problem when rink managers are often booking from the rink, not a desktop.",
+              "Buttons, menus, and product cards feel tight and hard to tap on a phone \u2014 a problem when rink managers are often browsing from the rink, not a desktop.",
           },
           {
             title: "Outdated SEO Signals",
@@ -150,12 +130,12 @@ export const adsOnBoards: Proposal = {
       {
         name: "Shop",
         description:
-          "Reorganized WooCommerce-style catalog with four categories: Dasher Board Ads, Line/Glass & Step Ads, Cleaning & Rink Equipment, and Coaching & Team Products.",
+          "Cleaner product catalog that\u2019s easier to browse \u2014 organization refined with you during discovery rather than locked in up front.",
       },
       {
         name: "Product Pages (15)",
         description:
-          "All 15 existing products migrated with complete pricing, size specs, and variant options \u2014 from the $46.50 Step Ad to the $3,280 adhesive dasher board packages. We can also shoot fresh product photography for any items that need a refresh.",
+          "All 15 existing products migrated with specs, variants, and pricing as confirmed with your team. We can also shoot fresh product photography for any items that need a refresh.",
         multiPage: true,
       },
       {
@@ -200,7 +180,7 @@ export const adsOnBoards: Proposal = {
           {
             title: "Asset Collection",
             description:
-              "Gather product photos, pricing confirmations (including the missing Glass Ad price), logos, and existing copy.",
+              "Gather product photos, pricing confirmations, logos, and existing copy.",
           },
           {
             title: "Platform Setup",
@@ -240,9 +220,9 @@ export const adsOnBoards: Proposal = {
           "Organize the catalog, write the copy, and map every page before design begins.",
         items: [
           {
-            title: "Product Categorization",
+            title: "Product Organization",
             description:
-              "Group all 15 products into the four categories and verify specs, variants, and pricing for each.",
+              "Work with your team to organize the 15 products in a way that makes sense for buyers, and verify specs, variants, and pricing for each.",
           },
           {
             title: "Copywriting",
@@ -271,7 +251,7 @@ export const adsOnBoards: Proposal = {
           {
             title: "Product Migration",
             description:
-              "Migrate all 15 products with variants, pricing, and photography into the new categorized catalog.",
+              "Migrate all 15 products with variants, pricing, and photography into the new catalog.",
           },
           {
             title: "Online Scheduling",

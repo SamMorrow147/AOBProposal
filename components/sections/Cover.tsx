@@ -6,13 +6,21 @@ export default function Cover({ proposal }: { proposal: Proposal }) {
   return (
     <div className="relative">
       <Reveal>
-        <div className="flex flex-wrap items-center gap-3">
+        <h1 className="font-display leading-[1.1] tracking-tight">
+          <span className="block whitespace-nowrap text-[clamp(1.35rem,6.2vw,4.5rem)] font-bold">
+            {proposal.client.name}
+          </span>
+          <span className="mt-2 block whitespace-nowrap text-[clamp(1.15rem,5.2vw,3.5rem)] font-light accent-text">
+            {proposal.client.proposalTitle}
+          </span>
+        </h1>
+        <div className="mt-8 flex flex-col items-center gap-3">
           <Image
             src={proposal.client.brandLogo?.src ?? "/brand/clubhaus-chip.png"}
             alt={proposal.client.brandLogo?.alt ?? "Clubhaus Agency"}
-            width={96}
-            height={48}
-            className="h-11 w-auto"
+            width={112}
+            height={56}
+            className="h-12 w-auto"
           />
           {proposal.client.partnerLogos?.map((logo) => (
             <Image
@@ -28,11 +36,6 @@ export default function Cover({ proposal }: { proposal: Proposal }) {
             Powered by {proposal.client.poweredBy ?? "Clubhaus Agency"}
           </p>
         </div>
-        <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-          {proposal.client.name}
-          <br />
-          <span className="accent-text">{proposal.client.proposalTitle}</span>
-        </h1>
       </Reveal>
 
       <Reveal delay={0.1}>

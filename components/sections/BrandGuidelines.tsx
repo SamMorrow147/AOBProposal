@@ -20,31 +20,40 @@ export default function BrandGuidelines({ brand }: { brand: BrandSection }) {
       </Reveal>
 
       <div className="mt-14 space-y-10">
-        {brand.groups.map((group, gi) => (
-          <Reveal key={group.title} delay={0.05 * gi}>
-            <div>
-              <h3 className="font-display text-xl font-semibold">
-                <span className="mr-3 text-accent">
-                  {String(gi + 1).padStart(2, "0")}
-                </span>
-                {group.title}
-              </h3>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {group.items.map((item) => (
-                  <div
-                    key={item.title}
-                    className="rounded-xl border border-borderline bg-surface p-5"
-                  >
-                    <p className="text-sm font-semibold">{item.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">
-                      {item.description}
-                    </p>
-                  </div>
-                ))}
+        {brand.groups.map((group, gi) => {
+          const showGroupHeading = brand.groups.length > 1;
+          return (
+            <Reveal key={group.title || gi} delay={0.05 * gi}>
+              <div>
+                {showGroupHeading && (
+                  <h3 className="font-display text-xl font-semibold">
+                    <span className="mr-3 text-accent">
+                      {String(gi + 1).padStart(2, "0")}
+                    </span>
+                    {group.title}
+                  </h3>
+                )}
+                <div
+                  className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ${
+                    showGroupHeading ? "mt-4" : ""
+                  }`}
+                >
+                  {group.items.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-borderline bg-surface p-5"
+                    >
+                      <p className="text-sm font-semibold">{item.title}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-muted">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
 
       {brand.note && (
