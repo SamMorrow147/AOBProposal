@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Clubhaus Agency Proposals",
-  description: "Digital proposals by Clubhaus Agency",
+  title: "Ads On Boards USA Website Rebuild Proposal",
+  description: "Website rebuild proposal for Ads On Boards USA.",
 };
 
 export default function RootLayout({
