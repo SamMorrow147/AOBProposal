@@ -364,7 +364,6 @@ export const adsOnBoards: Proposal = {
           { label: "SEO Maintenance", value: "Included" },
           { label: "Domain / DNS Help", value: "Included" },
           { label: "Performance Checkups", value: "Included" },
-          { label: "Monthly Cost", value: "$150", emphasize: true },
         ],
       },
     ],
