@@ -4,6 +4,8 @@ export interface TeamMember {
   email: string;
   phone: string;
   website?: string;
+  /** Path under /public to an animated character gif shown beside the member's name */
+  character?: string;
 }
 
 export interface ClientInfo {

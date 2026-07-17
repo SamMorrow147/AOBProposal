@@ -199,6 +199,41 @@ export default function ProposalLayout({ proposal }: { proposal: Proposal }) {
           </section>
         ))}
       </main>
+
+      <footer className="border-t border-borderline">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-10 px-6 py-12 sm:gap-14 sm:px-10">
+          <a
+            href="https://www.clubhausagency.com"
+            target="_blank"
+            rel="noreferrer"
+            className="opacity-90 transition-opacity hover:opacity-100"
+            aria-label="Clubhaus Agency"
+          >
+            <Image
+              src="/brand/clubhaus-chip.png"
+              alt="Clubhaus Agency"
+              width={56}
+              height={56}
+              className="h-12 w-12"
+            />
+          </a>
+          <a
+            href="https://gac-mn.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="opacity-90 transition-opacity hover:opacity-100"
+            aria-label="GA Consulting"
+          >
+            <Image
+              src="/brand/ga-consulting.png"
+              alt="GA Consulting"
+              width={120}
+              height={60}
+              className="h-12 w-auto"
+            />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

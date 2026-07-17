@@ -15,23 +15,25 @@ export default function Cover({ proposal }: { proposal: Proposal }) {
           </span>
         </h1>
         <div className="mt-8 flex flex-col items-center gap-3">
-          <Image
-            src={proposal.client.brandLogo?.src ?? "/brand/clubhaus-chip.png"}
-            alt={proposal.client.brandLogo?.alt ?? "Clubhaus Agency"}
-            width={112}
-            height={56}
-            className="h-12 w-auto"
-          />
-          {proposal.client.partnerLogos?.map((logo) => (
+          <div className="flex items-center gap-4">
             <Image
-              key={logo.src}
-              src={logo.src}
-              alt={logo.alt}
-              width={80}
+              src={proposal.client.brandLogo?.src ?? "/brand/clubhaus-chip.png"}
+              alt={proposal.client.brandLogo?.alt ?? "Clubhaus Agency"}
+              width={112}
               height={56}
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
-          ))}
+            {proposal.client.partnerLogos?.map((logo) => (
+              <Image
+                key={logo.src}
+                src={logo.src}
+                alt={logo.alt}
+                width={40}
+                height={40}
+                className="h-9 w-9"
+              />
+            ))}
+          </div>
           <p className="text-xs uppercase tracking-[0.35em] text-muted">
             Powered by {proposal.client.poweredBy ?? "Clubhaus Agency"}
           </p>

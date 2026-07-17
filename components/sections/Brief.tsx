@@ -15,7 +15,7 @@ export default function Brief({ brief }: { brief: BriefSection }) {
 
       <div className="mt-14 grid gap-6 lg:grid-cols-2">
         <Reveal delay={0.1}>
-          <div className="h-full rounded-2xl border border-borderline bg-surface p-8">
+          <div className="h-full rounded-2xl border border-red-200/70 bg-red-50/60 p-8">
             <p className="text-sm font-bold uppercase tracking-[0.15em] text-accent">
               Problem Statement
             </p>

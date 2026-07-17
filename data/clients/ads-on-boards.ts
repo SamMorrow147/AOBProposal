@@ -5,8 +5,9 @@ export const adsOnBoards: Proposal = {
   client: {
     name: "Ads On Boards USA",
     proposalTitle: "Website Rebuild Proposal",
-    poweredBy: "GAC",
+    poweredBy: "GAC and Clubhaus",
     brandLogo: { src: "/brand/ga-consulting.png", alt: "GA Consulting" },
+    partnerLogos: [{ src: "/brand/clubhaus-icon.png", alt: "Clubhaus Agency" }],
     hideNavLogo: true,
     accentColor: "#329ec7",
     accentColorSecondary: "#293a8d",
@@ -18,6 +19,7 @@ export const adsOnBoards: Proposal = {
       email: "Mark@GAC-MN.com",
       phone: "651 338 2633",
       website: "GAC-MN.com",
+      character: "/animations/drawing-guy.gif",
     },
     {
       name: "Sam Morrow",
@@ -25,6 +27,7 @@ export const adsOnBoards: Proposal = {
       email: "Sam@ClubHausAgency.com",
       phone: "320 219 8802",
       website: "ClubHausAgency.com",
+      character: "/animations/painting-guy.gif",
     },
     {
       name: "Noah Morrow",
@@ -32,6 +35,7 @@ export const adsOnBoards: Proposal = {
       email: "Noah@ClubHausAgency.com",
       phone: "320 405 4425",
       website: "ClubHausAgency.com",
+      character: "/animations/computer-guy.gif",
     },
     {
       name: "Darby Shaw",
@@ -39,6 +43,7 @@ export const adsOnBoards: Proposal = {
       email: "Darby@ClubHausAgency.com",
       phone: "408 603 0916",
       website: "ClubHausAgency.com",
+      character: "/animations/social-media-girl.gif",
     },
   ],
   intro: {

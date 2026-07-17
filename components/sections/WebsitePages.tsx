@@ -37,14 +37,57 @@ function PageMarker({ multiPage }: { multiPage?: boolean }) {
   );
 }
 
+/** Matches the Tailwind `top-4` offset the track starts from. */
+const TRACK_TOP_OFFSET = 16;
+
 export default function WebsitePages({ website }: { website: WebsiteSection }) {
   const pagesRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = pagesRef.current;
-    if (!container) return;
+    const track = trackRef.current;
+    const line = lineRef.current;
+    if (!container || !track || !line) return;
+
+    // Stop the rail at the center of the last marker instead of the bottom
+    // of the container, so it doesn't trail past the final page item.
+    const sizeTrack = () => {
+      const markers = container.querySelectorAll<HTMLElement>(
+        "[data-page-marker]"
+      );
+      const lastMarker = markers[markers.length - 1];
+      if (!lastMarker) return;
+      const containerTop = container.getBoundingClientRect().top;
+      const markerRect = lastMarker.getBoundingClientRect();
+      const markerCenter =
+        markerRect.top - containerTop + markerRect.height / 2;
+      const height = Math.max(markerCenter - TRACK_TOP_OFFSET, 0);
+      track.style.height = `${height}px`;
+      line.style.height = `${height}px`;
+    };
+
+    sizeTrack();
+    window.addEventListener("resize", sizeTrack);
 
     const ctx = gsap.context(() => {
+      gsap.fromTo(
+        line,
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          ease: "none",
+          transformOrigin: "top center",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 65%",
+            end: "bottom 75%",
+            scrub: 0.5,
+          },
+        }
+      );
+
       container.querySelectorAll("[data-page-marker]").forEach((marker) => {
         gsap.fromTo(
           marker,
@@ -83,7 +126,10 @@ export default function WebsitePages({ website }: { website: WebsiteSection }) {
       });
     }, container);
 
-    return () => ctx.revert();
+    return () => {
+      window.removeEventListener("resize", sizeTrack);
+      ctx.revert();
+    };
   }, []);
 
   return (
@@ -100,8 +146,20 @@ export default function WebsitePages({ website }: { website: WebsiteSection }) {
       </Reveal>
 
       <div ref={pagesRef} className="relative mt-12">
-        {/* Vertical rail connecting the plane cards */}
-        <div className="absolute bottom-4 left-[1.9rem] top-4 w-px bg-borderline sm:left-[2.35rem]" />
+        {/* Track + animated line, centered on the plane cards */}
+        <div
+          ref={trackRef}
+          className="absolute left-[1.9rem] top-4 w-px bg-borderline sm:left-[2.35rem]"
+        />
+        <div
+          ref={lineRef}
+          className="absolute left-[calc(1.9rem-1px)] top-4 w-[3px] rounded-full sm:left-[calc(2.35rem-1px)]"
+          style={{
+            background:
+              "linear-gradient(180deg, var(--accent), var(--accent-secondary))",
+            transform: "scaleY(0)",
+          }}
+        />
 
         <div className="space-y-8">
           {website.pages.map((page) => (

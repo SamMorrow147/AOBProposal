@@ -31,19 +31,21 @@ export default function Pricing({ pricing }: { pricing: PricingSection }) {
                   : "border-borderline bg-surface"
               }`}
             >
-              {option.highlighted && (
-                <span className="absolute -top-3 left-8 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest text-white"
+              {option.highlighted ? (
+                <span
+                  className="absolute -top-3 left-8 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest text-white"
                   style={{
                     background:
                       "linear-gradient(90deg, var(--accent), var(--accent-secondary))",
                   }}
                 >
-                  Recommended
+                  {option.label}
                 </span>
+              ) : (
+                <p className="text-xs uppercase tracking-[0.3em] text-muted">
+                  {option.label}
+                </p>
               )}
-              <p className="text-xs uppercase tracking-[0.3em] text-muted">
-                {option.label}
-              </p>
               <h3 className="mt-2 font-display text-2xl font-bold">
                 {option.name}
               </h3>

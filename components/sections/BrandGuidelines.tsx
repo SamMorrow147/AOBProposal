@@ -41,7 +41,7 @@ export default function BrandGuidelines({ brand }: { brand: BrandSection }) {
                   {group.items.map((item) => (
                     <div
                       key={item.title}
-                      className="rounded-xl border border-borderline bg-surface p-5"
+                      className="rounded-xl border border-red-200/70 bg-red-50/60 p-5"
                     >
                       <p className="text-sm font-semibold">{item.title}</p>
                       <p className="mt-2 text-sm leading-relaxed text-muted">
